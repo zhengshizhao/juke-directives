@@ -2,7 +2,7 @@ juke.directive('doubleClick', function ($parse) {
     return {
         restrict: 'A',
         scope: {
-            doubleClick: '&'    
+            doubleClick: '&'  
         },
         link: function(scope, element, attr){
            // var start = $parse(attr.doubleClick);
