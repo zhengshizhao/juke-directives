@@ -15,6 +15,11 @@ juke.directive('myFooter', function(PlayerFactory){
 
       scope.getPercent = function () {
         return PlayerFactory.getProgress() * 100;
+
+      // scope.getcursor = function(event){
+
+      //    console.log("this is an event:", event);
+      // }
       };
     }
   }
