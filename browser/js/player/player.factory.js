@@ -68,7 +68,11 @@ juke.factory('PlayerFactory', function ($rootScope) {
   player.getTime = function(){
     return playtime;
   }
-
+  
+  player.changePlayPoint = function(position){
+    audio.currentTime = audio.duration * position;
+  }
+  
   // audio event listening
 
   audio.addEventListener('ended', function () {

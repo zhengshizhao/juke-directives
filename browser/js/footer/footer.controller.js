@@ -1,9 +1,16 @@
-juke.controller('cursorCtrl', function($scope, ){
+juke.controller('cursorCtrl', function($scope, PlayerFactory){
+  
 	 $scope.getcursor = function(event){
-	 	var clickPosition = event.offsetX;
-	 	
-	 	clickPosition / xti * songduration
-         console.log(event.offsetX, event.offsetY);
+       
+       
+	   var clickPosition = event.offsetX;
+       
+	   var barPosition = event.toElement.clientWidth;
+       
+       var position = clickPosition/barPosition
+       
+       PlayerFactory.changePlayPoint(position)
+       
       }
 
 })
