@@ -1,9 +1,3 @@
-<!--
-<div class="album">
-  <p>
-    <h3>{{ album.name }}</h3>
-    <img ng-src="{{ album.imageUrl }}" class="img-thumbnail">
-  </p>
   <table class='table'>
     <thead>
       <tr>
@@ -14,7 +8,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="song in album.songs" ng-class="{active: song === getCurrentSong() }">
+      <tr ng-repeat="song in type.songs" ng-class="{active: song === getCurrentSong() }">
         <td>
           <button class="btn btn-default btn-xs" ng-click="toggle(song)">
             <span class="glyphicon" ng-class="{ 'glyphicon-pause': isPlaying(song), 'glyphicon-play': !isPlaying(song) }"></span>
@@ -26,12 +20,3 @@
       </tr>
     </tbody>
   </table>
-</div>
--->
-<div class="album">
-  <h3>{{ album.name }}</h3>
-    <p>
-      <img ng-src="{{ album.imageUrl }}" class="img-thumbnail">
-    </p>
-  <song-list type="album"></song-list>
-</div>
