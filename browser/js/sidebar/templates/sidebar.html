@@ -23,5 +23,13 @@
         <a ui-sref="newPlaylist" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-plus"></span> PLAYLIST</a>
       </p>
     </section>
+
+    <section>
+          <div ng-show="getCurrentSong()" ng-controller="SidebarCtrl"> {{getCurrentSong().name}} is playing...
+            <br>
+            {{getTime()}}
+          </div> 
+
+    </section>
   </sidebar>
 </div>
