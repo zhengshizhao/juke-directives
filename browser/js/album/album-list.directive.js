@@ -6,12 +6,6 @@ juke.directive('albumList', function (AlbumFactory){
     templateUrl: 'js/album/templates/album-list.html',
     scope: {
       albums: '='
-    },
-    link: function (scope){
-      AlbumFactory.fetchAll()
-      .then(function (albums){
-        scope.albums = albums;
-      })
     }
   }
 })
